@@ -3,10 +3,35 @@
 
 <!DOCTYPE html>
 <html ng-app="widgetsApp">
+
 <head>
   <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="app.js"></script>
 </head>
-<body>
+<body ng-controller="RestaurantCtrl">
+  {{ 1+1}}
+  <form name="createRestaurant">
+    <input type = "text" label="Name" ng-model="formData.name">
+    <input type = "text" ng-model="formData.type">
+    <input type="submit" value="Create Restaurant" ng-click="processForm()">
+  </form>
+
+  <table>
+    <thead>
+      <tr >
+      <td>Name</td>
+      <td>Type</td>
+      </tr>      
+    </thead>
+    <tbody>
+      
+      <tr ng-repeat="r in restaurants">
+      <td>{{ r.name }}</td>
+      <td>{{ r.type }}</td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>
