@@ -28,6 +28,7 @@
       <tr ng-repeat="r in restaurants | orderBy: 'name'">
         <td>{{ r.name }}</td>
         <td>{{ r.foodType }}</td>
+        <td><input type="submit" value="Delete Restaurant" ng-click="deleteRestaurant( $index )"></td>
       </tr>
     </tbody>
   </table>

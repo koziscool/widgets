@@ -15,9 +15,12 @@ widgets.controller( 'RestaurantCtrl',
         var newRestaurant = {};
         newRestaurant.name = $scope.formData.name;
         newRestaurant.foodType = $scope.formData.type;
-        console.log( newRestaurant );
         $scope.restaurants.push( newRestaurant );
-    }
+    };
+
+    $scope.deleteRestaurant = function( index ) {
+        $scope.restaurants.splice(index, 1);
+    };
 
 
   }]);
