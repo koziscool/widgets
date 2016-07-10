@@ -9,7 +9,7 @@ widgets.controller( 'RestaurantCtrl',
     $scope.processForm = function() {
         var newRestaurant = {};
         newRestaurant.name = $scope.formData.name;
-        newRestaurant.type = $scope.formData.type;
+        newRestaurant.foodType = $scope.formData.type;
         console.log( newRestaurant );
         $scope.restaurants.push( newRestaurant );
     }
